@@ -9,6 +9,8 @@ The LBP Library is a collection of **eleven** Local Binary Patterns (LBP) algori
 
 *Tests with OpenCV 3 are being conducted, and new changes can be made soon.*
 
+<p align="center"><img src="https://raw.githubusercontent.com/carolinepacheco/lbplibrary/master/docs/screen0.png" border="0" height="200"/></p>
+
 List of the algorithms available in the LBP Library
 ---------------------------------------------------
 * BGLBP
@@ -96,6 +98,8 @@ int main(int argc, char **argv)
 	delete lbp;
 }
 ```
+
+<p align="center"><img src="https://raw.githubusercontent.com/carolinepacheco/lbplibrary/master/docs/screen2.png" border="0"/></p>
 
 Release Notes:
 --------------
