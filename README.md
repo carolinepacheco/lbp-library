@@ -1,6 +1,6 @@
 # LBP Library
 
-Last Page Update: **11/07/2016**
+Last Page Update: **21/07/2016**
 
 Latest Library Version: **1.0.0** (see Release Notes for more info).
 
@@ -13,17 +13,17 @@ The LBP Library is a collection of **eleven** Local Binary Patterns (LBP) algori
 
 List of the algorithms available in the LBP Library
 ---------------------------------------------------
-* BGLBP
-* CSLBP
-* CSLDP
-* CSSILTP
-* ELBP
-* OCLBP
-* OLBP
-* SCSLBP
-* SILTP
-* VARLBP
-* XCSLBP
+* BG-LBP (BackGround Local Binary Pattern) by [Davarpanah et al. (2015)](http://link.springer.com/article/10.1007/s11042-015-2588-3)
+* CS-LBP (First-order Center-Symmetric Local Binary Patterns) by [Heikkilä et al. (2006)](http://link.springer.com/chapter/10.1007%2F11949619_6)
+* CS-LDP (Second-order Center-Symmetric Local Derivative Pattern) by [Xue et al. (2011)](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6011859)
+* CS-SILTP (Center-Symmetric Scale Invariant Local Ternary Patterns) by [Wu et al. (2013)](http://link.springer.com/article/10.1007/s11760-013-0576-5)
+* E-LBP (Extended LBP or Circular LBP) by [Mdakane and Bergh (2012)](http://researchspace.csir.co.za/dspace/handle/10204/6491)
+* OC-LBP (Opponent Color Local Binary Pattern) by [Maenpaa and Pietikainen (2004)](http://www.sciencedirect.com/science/article/pii/S0031320303004321)
+* O-LBP (Original LBP) by [Ojala et al. (2001)](http://dl.acm.org/citation.cfm?id=685274)
+* SCS-LBP (Spatial extended Center-Symmetric Local Binary Pattern) by [Xue et al. (2010)](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5582601)
+* SI-LTP (Scale Invariant Local Ternary Pattern) by [Liao et al. (2010)](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5539817)
+* VAR-LBP (Variance-based LBP) by [Ojala et al. (2002)](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1017623)
+* XCS-LBP (eXtended Center-Symmetric Local Binary Pattern) by [Silva et al. (2015)](http://www.scitepress.org/DigitalLibrary/PublicationsDetail.aspx?ID=hLjaizF3mfI=)
 
 Citation
 --------
