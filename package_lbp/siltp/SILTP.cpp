@@ -30,8 +30,8 @@ namespace lbplibrary
     // declare mat images
     cv::Mat image_1, image_3, image_5, image_7;
     cv::Mat image_2, image_4, image_6, image_8;
-    int height = image_0.size().height;
-    int width = image_0.size().width;
+    //int height = image_0.size().height;
+    //int width = image_0.size().width;
 
     // copy image in specified directions
     cv::Rect roi_1(2 * radius, radius, widthIn, heightIn);

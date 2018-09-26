@@ -6,7 +6,7 @@
 
 namespace lbplibrary
 {
-  XCSLBP::XCSLBP() : bilinearInterpolation(0), fxRadius(1), fyRadius(1), tInterval(2), borderLength(1), timeLength(2)
+  XCSLBP::XCSLBP() : fxRadius(1), fyRadius(1), borderLength(1)
   {
     std::cout << "XCSLBP()" << std::endl;
   }
@@ -112,7 +112,7 @@ namespace lbplibrary
       gray = input.clone();
 
     const int neighborPoints[3] = { 8, 8, 8 };
-    int xyNeighborPoints = neighborPoints[0];
+    //int xyNeighborPoints = neighborPoints[0];
 
     // create output background model
     /*cv::Mat*/ XCSLBP = cv::Mat(height, width, CV_8UC1);

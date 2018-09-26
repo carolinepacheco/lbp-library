@@ -5,7 +5,7 @@
 
 namespace lbplibrary
 {
-  BGLBP::BGLBP() : filterDim(3), neighbours(1), beta(3)
+  BGLBP::BGLBP() : beta(3), filterDim(3), neighbours(1)
   {
     std::cout << "BGLBP()" << std::endl;
   }
@@ -20,8 +20,8 @@ namespace lbplibrary
     if (input.empty())
       return;
 
-    int rows = input.size().height;
-    int cols = input.size().width;
+    //int rows = input.size().height;
+    //int cols = input.size().width;
     int channels = input.channels();
 
     // convert input image to grayscale
@@ -68,7 +68,7 @@ namespace lbplibrary
       {
         // current central pixel
         unsigned char* grayData = &gray.data[j + i * gray.cols];
-        int centralPixel = gray.data[j + i * gray.cols];
+        //int centralPixel = gray.data[j + i * gray.cols];
 
         // 3x3 neighborhood
         float sum = 0;

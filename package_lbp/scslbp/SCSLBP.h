@@ -8,19 +8,8 @@ namespace lbplibrary
   class SCSLBP : public LBP
   {
   private:
-    int rows;
-    int cols;
-    int classNum;
-    float tpthresh;
-    float tbthresh;
     int radius;
     int neighbors;
-    int histRadius;
-    float alpha;
-    float alphatempral;
-    int mappNb;
-    int bins;
-    int sigmaValues;
 
     void lbpcompute(const cv::Mat &input, cv::Mat &LBPImage);
 

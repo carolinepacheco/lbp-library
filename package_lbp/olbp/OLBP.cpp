@@ -42,8 +42,8 @@ namespace lbplibrary
     if (img_input.empty())
       return;
 
-    int height = img_input.size().height;
-    int width = img_input.size().width;
+    //int height = img_input.size().height;
+    //int width = img_input.size().width;
     int channels = img_input.channels();
 
     cv::Mat img_gray;
@@ -54,13 +54,13 @@ namespace lbplibrary
 
     switch (img_gray.type())
     {
-    case CV_8SC1: OLBP_<char>(img_gray, img_output); break;
-    case CV_8UC1: OLBP_<unsigned char>(img_gray, img_output); break;
-    case CV_16SC1: OLBP_<short>(img_gray, img_output); break;
-    case CV_16UC1: OLBP_<unsigned short>(img_gray, img_output); break;
-    case CV_32SC1: OLBP_<int>(img_gray, img_output); break;
-    case CV_32FC1: OLBP_<float>(img_gray, img_output); break;
-    case CV_64FC1: OLBP_<double>(img_gray, img_output); break;
+      case CV_8SC1: OLBP_<char>(img_gray, img_output); break;
+      case CV_8UC1: OLBP_<unsigned char>(img_gray, img_output); break;
+      case CV_16SC1: OLBP_<short>(img_gray, img_output); break;
+      case CV_16UC1: OLBP_<unsigned short>(img_gray, img_output); break;
+      case CV_32SC1: OLBP_<int>(img_gray, img_output); break;
+      case CV_32FC1: OLBP_<float>(img_gray, img_output); break;
+      case CV_64FC1: OLBP_<double>(img_gray, img_output); break;
     }
   }
 }

@@ -8,8 +8,6 @@ namespace lbplibrary
   class CSLBP : public LBP
   {
   private:
-    int cols;
-    int rows;
     int filterDim;
     int numberOfWeights;
 

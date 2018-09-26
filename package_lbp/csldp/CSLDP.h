@@ -8,8 +8,6 @@ namespace lbplibrary
   class CSLDP : public LBP
   {
   private:
-    int rows;
-    int cols;
     int bilinearInterpolation;
     int fxRadius;
     int fyRadius;

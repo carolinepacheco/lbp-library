@@ -54,21 +54,22 @@ namespace lbplibrary
   // wrappers
   void histogram(const cv::Mat& src, cv::Mat& hist, int numPatterns) {
     switch (src.type()) {
-    case CV_8SC1: histogram_<char>(src, hist, numPatterns); break;
-    case CV_8UC1: histogram_<unsigned char>(src, hist, numPatterns); break;
-    case CV_16SC1: histogram_<short>(src, hist, numPatterns); break;
-    case CV_16UC1: histogram_<unsigned short>(src, hist, numPatterns); break;
-    case CV_32SC1: histogram_<int>(src, hist, numPatterns); break;
+      case CV_8SC1: histogram_<char>(src, hist, numPatterns); break;
+      case CV_8UC1: histogram_<unsigned char>(src, hist, numPatterns); break;
+      case CV_16SC1: histogram_<short>(src, hist, numPatterns); break;
+      case CV_16UC1: histogram_<unsigned short>(src, hist, numPatterns); break;
+      case CV_32SC1: histogram_<int>(src, hist, numPatterns); break;
     }
   }
 
   double chi_square(const cv::Mat& histogram0, const cv::Mat& histogram1) {
     switch (histogram0.type()) {
-    case CV_8SC1: return chi_square_<char>(histogram0, histogram1); break;
-    case CV_8UC1: return chi_square_<unsigned char>(histogram0, histogram1); break;
-    case CV_16SC1: return chi_square_<short>(histogram0, histogram1); break;
-    case CV_16UC1: return chi_square_<unsigned short>(histogram0, histogram1); break;
-    case CV_32SC1: return chi_square_<int>(histogram0, histogram1); break;
+      case CV_8SC1: return chi_square_<char>(histogram0, histogram1); break;
+      case CV_8UC1: return chi_square_<unsigned char>(histogram0, histogram1); break;
+      case CV_16SC1: return chi_square_<short>(histogram0, histogram1); break;
+      case CV_16UC1: return chi_square_<unsigned short>(histogram0, histogram1); break;
+      case CV_32SC1: return chi_square_<int>(histogram0, histogram1); break;
+      default: return 0;
     }
   }
 

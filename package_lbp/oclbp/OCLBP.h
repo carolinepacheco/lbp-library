@@ -9,11 +9,7 @@ namespace lbplibrary
   class OCLBP : public LBP
   {
   private:
-    int rows;
-    int cols;
-    int nComb;
     int isEfficient;
-    int cfgSnailMatIndex;
     int filtDimsX;
     int filtDimsY;
 
