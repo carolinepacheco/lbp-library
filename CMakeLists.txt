@@ -17,6 +17,10 @@ IF(UNIX)
   #ADD_DEFINITIONS(-Wconversion -Wfloat-equal)
 endif(UNIX)
 
+if(APPLE)
+  set(CMAKE_MACOSX_RPATH ON)
+endif()
+
 find_package(OpenCV REQUIRED)
 
 message(STATUS "OpenCV library status:")
@@ -24,9 +28,9 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-if(${OpenCV_VERSION} VERSION_EQUAL 3 OR ${OpenCV_VERSION} VERSION_GREATER 3)
+if(${OpenCV_VERSION} VERSION_EQUAL 4 OR ${OpenCV_VERSION} VERSION_GREATER 4)
   message (FATAL_ERROR "OpenCV version is not compatible: ${OpenCV_VERSION}")
-	message (FATAL_ERROR "Please use OpenCV 2.4.x version.")
+	message (FATAL_ERROR "Please use OpenCV 2.x or 3.x")
 endif()
 
 file(GLOB sources histogram.cpp)
@@ -43,8 +47,7 @@ set_property(TARGET lbp PROPERTY PUBLIC_HEADER ${lbp_include})
 
 add_executable(lbp_bin ${main})
 target_link_libraries(lbp_bin ${OpenCV_LIBS} lbp)
-set_target_properties(lbp_bin
-  PROPERTIES OUTPUT_NAME lbp)
+set_target_properties(lbp_bin PROPERTIES OUTPUT_NAME lbp)
 
 INSTALL(TARGETS lbp
 	lbp_bin

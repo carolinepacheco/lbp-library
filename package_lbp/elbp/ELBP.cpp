@@ -58,8 +58,8 @@ namespace lbplibrary
     if (img_input.empty())
       return;
 
-    int height = img_input.size().height;
-    int width = img_input.size().width;
+    //int height = img_input.size().height;
+    //int width = img_input.size().width;
     int channels = img_input.channels();
 
     cv::Mat img_gray;

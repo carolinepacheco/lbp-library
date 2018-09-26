@@ -111,7 +111,7 @@ namespace lbplibrary
       gray = input.clone();
 
     int neighborPoints[3] = { 8, 8, 8 };
-    int xyNeighborPoints = neighborPoints[0];
+    //int xyNeighborPoints = neighborPoints[0];
 
     // create output background model
     /*cv::Mat*/ CSLDP = cv::Mat(height, width, CV_8UC1, cv::Scalar(0));

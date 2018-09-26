@@ -6,8 +6,7 @@
 
 namespace lbplibrary
 {
-  SCSLBP::SCSLBP() : classNum(4), tpthresh(0.65), tbthresh(0.8), radius(2), neighbors(4),
-    histRadius(8), alpha(0.01), alphatempral(0.005), mappNb(16), bins(32), sigmaValues(10)
+  SCSLBP::SCSLBP() : radius(2), neighbors(4)
   {
     std::cout << "SCSLBP()" << std::endl;
   }
@@ -27,7 +26,7 @@ namespace lbplibrary
     int fyd, fxd, cyd, cxd, ryd, rxd;
     float miny = 999, minx = 999;
     float maxy = 0, maxx = 0;
-    int mapping = 0;
+    //int mapping = 0;
     float spoints[2][2 * 4];
 
     // angle step
@@ -100,8 +99,8 @@ namespace lbplibrary
       fyd = floor(yd); cyd = ceil(yd); ryd = roundLocal(yd);
       fxd = floor(xd); cxd = ceil(xd); rxd = roundLocal(xd);
 
-      int a = abs(x - rx);
-      int b = abs(y - ry);
+      //int a = abs(x - rx);
+      //int b = abs(y - ry);
 
       // check if interpolation is needed
       if ((abs(x - rx) < 1 / 100000.0) && (abs(y - ry) < 1 / 100000.0))

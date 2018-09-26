@@ -6,7 +6,7 @@
 
 namespace lbplibrary
 {
-  OCLBP::OCLBP() : nComb(6), isEfficient(1), cfgSnailMatIndex(0), filtDimsX(3), filtDimsY(3)
+  OCLBP::OCLBP() : isEfficient(1), filtDimsX(3), filtDimsY(3)
   {
     std::cout << "OCLBP()" << std::endl;
   }
@@ -127,7 +127,7 @@ namespace lbplibrary
     cv::Mat diffVecPositive(1, nNeighbours, CV_8UC1);
 
     float* subImgMaskedData = (float*)subImgMasked.data;
-    float* diffVecData = (float*)diffVec.data;
+    //float* diffVecData = (float*)diffVec.data;
 
     // process each channel
     for (int i = 0; i < nComb; i++)
@@ -220,7 +220,7 @@ namespace lbplibrary
 
     // Primitive pixelwise solution
     int filtDims[2] = { filtDimsX, filtDimsY };
-    int filtDimsR[2] = { floor((double)filtDimsX / 2), floor((double)filtDimsY / 2) };
+    int filtDimsR[2] = { static_cast<int>(floor(filtDimsX / 2.)), static_cast<int>(floor(filtDimsY / 2.)) };
 
     // padd image with zeroes to deal with the edges
     cv::Mat paddedImage = input;

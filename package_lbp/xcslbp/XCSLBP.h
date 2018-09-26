@@ -8,12 +8,10 @@ namespace lbplibrary
   class XCSLBP : public LBP
   {
   private:
-    int bilinearInterpolation;
     int fxRadius;
     int fyRadius;
-    int tInterval;
     int borderLength;
-    int timeLength;
+    
   public:
     XCSLBP();
     ~XCSLBP();

@@ -20,10 +20,10 @@ namespace lbplibrary
     if (input.empty())
       return;
 
-    const int N = 255; // max value of u8 pixel
+    //const int N = 255; // max value of u8 pixel
     const int weights = numberOfWeights;
-    int rows = input.size().height;
-    int cols = input.size().width;
+    //int rows = input.size().height;
+    //int cols = input.size().width;
     int channels = input.channels();
 
     // convert input image to grayscale
@@ -34,16 +34,15 @@ namespace lbplibrary
       gray = input.clone();
 
     // create filter
-    CvMat* filter = cvCreateMat(filterDim, filterDim, CV_8UC1);
+    //CvMat* filter = cvCreateMat(filterDim, filterDim, CV_8UC1);
 
     // verify filter dimensions are odd, so a middle element always exists
     assert(filterDim == (filterDim + 1 - filterDim % 2));
 
-    int nNeighbours = filterDim * filterDim - 1;
-    int nWeights = numberOfWeights;
+    //int nNeighbours = filterDim * filterDim - 1;
+    //int nWeights = numberOfWeights;
 
-    int filterRadius[2] = { floor((float)filterDim / 2),
-      floor((float)filterDim / 2) };
+    int filterRadius[2] = { static_cast<int>(floor(filterDim / 2.)), static_cast<int>(floor(filterDim / 2.)) };
 
     // padd image with zeroes to deal with the edges
     cv::Mat paddedImage = gray;
