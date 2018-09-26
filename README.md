@@ -1,13 +1,11 @@
 # LBP Library
 
-Last Page Update: **21/07/2016**
+Last Page Update: **26/09/2018**
 
-Latest Library Version: **1.0.0** (see Release Notes for more info).
+Latest Library Version: **1.0.1** (see Release Notes for more info).
 
 
-The LBP Library is a collection of **eleven** Local Binary Patterns (LBP) algorithms developed for **background subtraction** problem. The algorithms were implemented in C++ based on [OpenCV](http://www.opencv.org/). A CMake file is provided and the library is complatible with Windows, Linux and Mac OS X. The library was tested successfully with OpenCV 2.4.10.
-
-*Tests with OpenCV 3 are being conducted, and new changes can be made soon.*
+The LBP Library is a collection of **eleven** Local Binary Patterns (LBP) algorithms developed for **background subtraction** problem. The algorithms were implemented in C++ based on [OpenCV](http://www.opencv.org/). A CMake file is provided and the library is complatible with Windows, Linux and Mac OS X. The library was tested successfully with OpenCV 2.4.x and OpenCV 3.4.x.
 
 <p align="center"><img src="https://raw.githubusercontent.com/carolinepacheco/lbplibrary/master/docs/screen0.png" border="0" height="200"/></p>
 
@@ -54,7 +52,7 @@ using namespace lbplibrary;
 
 int main(int argc, char **argv)
 {
-  cv::VideoCapture cap(0);
+  	cv::VideoCapture cap(0);
 	if (!cap.isOpened())
 		return;
 
@@ -103,5 +101,8 @@ int main(int argc, char **argv)
 
 Release Notes:
 --------------
+* Version 1.0.1:
+Code refactoring, removed unused variables, added OpenCV 3.x support, fixed some issues and updated cmakefile.
+
 * Version 1.0.0:
 First stable version. Added 11 LBP algorithms.
