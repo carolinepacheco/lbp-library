@@ -10,7 +10,7 @@ void test_image()
 	cv::Mat img_input = cv::imread("frames/1.png");
 	cv::imshow("Input", img_input);
 
-	cv::cvtColor(img_input, img_input, CV_BGR2GRAY);
+	cv::cvtColor(img_input, img_input, cv::COLOR_BGR2GRAY);
 	//cv::GaussianBlur(img_input, img_input, cv::Size(7, 7), 5, 3, cv::BORDER_CONSTANT);
 
 	LBP *lbp;
@@ -84,7 +84,7 @@ void test_webcam()
 		imshow("capture", frame);
 		show_multi_histogram(frame);
 
-		cv::cvtColor(frame, frame, CV_BGR2GRAY);
+		cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
 		//cv::GaussianBlur(frame, frame, cv::Size(7, 7), 5, 3, cv::BORDER_CONSTANT);
 
 		imshow("gray", frame);
