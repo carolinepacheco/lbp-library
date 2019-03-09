@@ -64,7 +64,7 @@ namespace lbplibrary
 
     cv::Mat img_gray;
     if (channels > 1)
-      cv::cvtColor(img_input, img_gray, CV_BGR2GRAY);
+      cv::cvtColor(img_input, img_gray, cv::COLOR_BGR2GRAY);
     else
       img_input.copyTo(img_gray);
 

@@ -107,7 +107,7 @@ namespace lbplibrary
     // convert input image to grayscale
     cv::Mat gray;
     if (channels > 1)
-      cv::cvtColor(input, gray, CV_BGR2GRAY);
+      cv::cvtColor(input, gray, cv::COLOR_BGR2GRAY);
     else
       gray = input.clone();
 

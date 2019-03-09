@@ -40,7 +40,7 @@ namespace lbplibrary
   {
     cv::Mat gray;
     if (image.channels() == 3)
-      cv::cvtColor(image, gray, CV_BGR2GRAY);
+      cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
     else
       gray = image;
 
@@ -209,7 +209,7 @@ namespace lbplibrary
 
     // convert OpenCV's BGR style to Matlab's RGB style
     cv::Mat imageRGBToAlignWithMatlab;
-    cv::cvtColor(input, imageRGBToAlignWithMatlab, CV_BGR2RGB);
+    cv::cvtColor(input, imageRGBToAlignWithMatlab, cv::COLOR_BGR2RGB);
 
     // go on with Matlab style RGB to be able to compare results with Matlab
     imageRGBToAlignWithMatlab.copyTo(input);

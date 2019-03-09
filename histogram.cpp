@@ -17,9 +17,9 @@ namespace lbplibrary
   template <typename _Tp>
   double chi_square_(const cv::Mat& histogram0, const cv::Mat& histogram1) {
     if (histogram0.type() != histogram1.type())
-      CV_Error(CV_StsBadArg, "Histograms must be of equal type.");
+      CV_Error(cv::Error::StsBadArg, "Histograms must be of equal type.");
     if (histogram0.rows != 1 || histogram0.rows != histogram1.rows || histogram0.cols != histogram1.cols)
-      CV_Error(CV_StsBadArg, "Histograms must be of equal dimension.");
+      CV_Error(cv::Error::StsBadArg, "Histograms must be of equal dimension.");
     double result = 0.0;
     for (int i = 0; i < histogram0.cols; i++) {
       double a = histogram0.at<_Tp>(0, i) - histogram1.at<_Tp>(0, i);
@@ -43,7 +43,7 @@ namespace lbplibrary
     }
     hist.create(1, histograms.size()*numPatterns, CV_32SC1);
     // i know this is a bit lame now... feel free to make this a bit more efficient...
-    for (int histIdx = 0; histIdx < histograms.size(); histIdx++) {
+    for (int histIdx = 0; (std::size_t)histIdx < histograms.size(); histIdx++) {
       for (int valIdx = 0; valIdx < numPatterns; valIdx++) {
         int y = histIdx*numPatterns + valIdx;
         hist.at<int>(0, y) = histograms[histIdx].at<int>(valIdx);
@@ -107,7 +107,7 @@ namespace lbplibrary
     std::vector<cv::Mat> hist(nc);       // histogram arrays
 
     // Initalize histogram arrays
-    for (int i = 0; i < hist.size(); i++)
+    for (int i = 0; (std::size_t)i < hist.size(); i++)
       hist[i] = cv::Mat::zeros(1, bins, CV_32SC1);
 
     // Calculate the histogram of the image
