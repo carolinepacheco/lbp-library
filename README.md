@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/andrewssobral/lbp-library)
+
 # LBP Library
 
 Last Page Update: **26/09/2018**
@@ -43,6 +45,7 @@ List of collaborators
 
 Example code
 ------------
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/andrewssobral/lbp-library)
 ```C++
 #include <iostream>
 #include <opencv2/opencv.hpp>
